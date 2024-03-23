@@ -98,7 +98,7 @@
          foreach($to_scan as $toscan){
          if(is_file($toscan)){
          
-         if(preg_match('/backdoor|phpinfo|php_uname|milw0rm|popen|exec|passthru|phpversion|enctype|shell_exec|proc_open|base64_decode/i', file_get_contents($toscan))  && $toscan != $self[$self_file]){
+         if(preg_match('/backdoor|phpinfo|php_uname|milw0rm|popen|exec|passthru|phpversion|enctype|shell_exec|lzw_decompress|proc_open|base64_decode/i', file_get_contents($toscan))  && $toscan != $self[$self_file]){
          $file_size = filesize($toscan);
          echo"
          <tr>
